@@ -1,0 +1,2 @@
+response = Net::HTTP.get_response("localhost:3000","/?search=thing&format=json")
+puts response.body //this must show the JSON contents
