@@ -1,0 +1,35 @@
+<h1>Editing To-Do item</h1>
+ 
+<%= form_for :todo, url: todo_path(@todo), method: :patch do |t| %>
+ 
+ 
+  <p>
+    <%= t.label :startdate %><br>
+    <%= t.text_field :startdate %>
+  </p>
+ 
+  <p>
+    <%= t.label :enddate %><br>
+    <%= t.text_field :enddate %>
+  </p>
+  
+    <p>
+    <%= t.label :description %><br>
+    <%= t.text_field :description %>
+  </p>
+  
+    <p>
+    <%= t.label :priority %><br>
+    <%= t.text_field :priority %>
+  </p>
+  
+    <p>
+    <%= t.label :status %><br>
+    <%= t.text_field :status %>
+  </p>
+ 
+  <p>
+    <%= t.submit %>
+  </p>
+ 
+<% end %>
