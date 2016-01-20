@@ -3,7 +3,7 @@ class CreateTodos < ActiveRecord::Migration
     create_table :todos do |t|
       t.string :startdate
       t.string :enddate
-      t.integer :priority
+      t.string :priority
       t.string :description
       t.string :status
 

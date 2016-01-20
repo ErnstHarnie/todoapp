@@ -4,16 +4,20 @@ class TodoController < ApplicationController
   
   def new
   
-body = Net::HTTP.get(URI("localhost:3000?startdate=#{startdate}&enddate=#{enddate}")).split("}")
-
-
-
-data = body.lines.map { |line| JSON.parse(line) }
   end
   
   def create
-
-end
-
-
+	   require 'net/http'
+		source = 'http://localhost:3000/todo/new/'
+		resp = Net::HTTP.get_response(URI.parse(source))
+		data = resp.body
+		result = JSON.parse(data)
+		
+		
+		#@todo = Todo.new(params[:todo])
+ 
+		#@todo.save
+		#redirect_to @todo
+  end
+  
 end
